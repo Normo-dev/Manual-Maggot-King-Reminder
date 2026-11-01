@@ -1,11 +1,11 @@
 package com.maggotkingmanual;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.util.function.Consumer;
 import net.runelite.client.game.SpriteManager;
+import net.runelite.client.util.ImageUtil;
 
 final class ManualStyleIcons
 {
@@ -49,22 +49,7 @@ final class ManualStyleIcons
 
 	static BufferedImage navigationIcon()
 	{
-		BufferedImage image = new BufferedImage(24, 24, BufferedImage.TYPE_INT_ARGB);
-		Graphics2D graphics = image.createGraphics();
-		try
-		{
-			graphics.setColor(Color.DARK_GRAY);
-			graphics.fillOval(0, 3, 17, 17);
-			graphics.fillOval(7, 5, 17, 17);
-			graphics.setColor(ManualStyle.RANGED.color);
-			graphics.fillOval(1, 4, 15, 15);
-			graphics.setColor(ManualStyle.MAGIC.color);
-			graphics.fillOval(8, 6, 15, 15);
-		}
-		finally
-		{
-			graphics.dispose();
-		}
-		return image;
+		BufferedImage icon = ImageUtil.loadImageResource(ManualStyleIcons.class, "icon.png");
+		return ImageUtil.resizeImage(icon, 24, 24);
 	}
 }
