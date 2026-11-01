@@ -21,8 +21,7 @@ import net.runelite.client.util.HotkeyListener;
 @PluginDescriptor(
 	name = "Manual Maggot King Reminder",
 	description = "A manual ranged/magic reminder controlled by sidebar buttons or a hotkey",
-	tags = {"maggot", "king", "manual", "reminder", "sidebar"},
-	enabledByDefault = false
+	tags = {"maggot", "king", "manual", "reminder", "sidebar"}
 )
 public class MaggotKingManualPlugin extends Plugin
 {
